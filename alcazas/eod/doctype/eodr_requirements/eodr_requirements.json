@@ -1,0 +1,121 @@
+{
+ "autoname": "format:EOD-REQ-{#####}",
+ "creation": "2021-04-12 13:06:30.125506",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "supervisor",
+  "column_break_2",
+  "employee_name",
+  "jobs_percentage_section",
+  "static_job",
+  "dynamic_job",
+  "column_break_7",
+  "routine_job",
+  "section_break_9",
+  "jobs",
+  "section_break_2",
+  "job_filters"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "jobs_percentage_section",
+   "fieldtype": "Section Break",
+   "label": "Jobs Percentage"
+  },
+  {
+   "fieldname": "static_job",
+   "fieldtype": "Percent",
+   "label": "Static Job",
+   "precision": "0"
+  },
+  {
+   "fieldname": "dynamic_job",
+   "fieldtype": "Percent",
+   "label": "Dynamic Job",
+   "precision": "0"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "routine_job",
+   "fieldtype": "Percent",
+   "label": "Routine Job",
+   "precision": "0"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Jobs"
+  },
+  {
+   "fieldname": "jobs",
+   "fieldtype": "Table",
+   "options": "EODR Requirements Jobs"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_filters",
+   "fieldtype": "Table",
+   "label": "Job Filters",
+   "options": "Job Filters"
+  }
+ ],
+ "modified": "2021-05-11 15:31:28.727403",
+ "modified_by": "Administrator",
+ "module": "EOD",
+ "name": "EODR Requirements",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "employee_name",
+ "track_changes": 1
+}

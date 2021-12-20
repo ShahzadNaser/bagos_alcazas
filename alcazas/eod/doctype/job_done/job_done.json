@@ -1,0 +1,291 @@
+{
+ "creation": "2021-03-28 17:10:39.844643",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_details",
+  "job_code",
+  "job_title",
+  "column_break_4",
+  "job_classification",
+  "ends_jobdetails",
+  "activity_type",
+  "job_done_details",
+  "job_date",
+  "section_break_3",
+  "expected_hours",
+  "hours",
+  "from_time",
+  "to_time",
+  "completed",
+  "section_break_7",
+  "completed_qty",
+  "workstation",
+  "column_break_12",
+  "operation",
+  "operation_id",
+  "project_details",
+  "project",
+  "column_break_2",
+  "task",
+  "section_break_6",
+  "billable",
+  "column_break_8",
+  "billing_hours",
+  "section_break_11",
+  "billing_rate",
+  "billing_amount",
+  "column_break_14",
+  "costing_rate",
+  "costing_amount",
+  "reference",
+  "sales_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_details",
+   "fieldtype": "Section Break",
+   "label": "Job Detail"
+  },
+  {
+   "fieldname": "ends_jobdetails",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Link",
+   "label": "Activity Type",
+   "options": "Activity Type"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "job_done_details",
+   "fieldtype": "Text Editor",
+   "in_preview": 1,
+   "label": "Job Details"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "expected_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Hrs",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Hours Spent",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "09:00:00",
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "label": "From Time"
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "label": "To Time"
+  },
+  {
+   "default": "0",
+   "fieldname": "completed",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "label": "Completed"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:parent.work_order",
+   "fieldname": "completed_qty",
+   "fieldtype": "Float",
+   "label": "Completed Qty"
+  },
+  {
+   "depends_on": "eval:parent.work_order",
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "label": "Workstation",
+   "options": "Workstation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:parent.work_order",
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "label": "Operation",
+   "options": "Operation",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:parent.work_order",
+   "fieldname": "operation_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Operation Id"
+  },
+  {
+   "fieldname": "project_details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "billable",
+   "fieldtype": "Check",
+   "label": "Bill",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "billable",
+   "fieldname": "billing_hours",
+   "fieldtype": "Float",
+   "label": "Billing Hours",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "billable",
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "billing_rate",
+   "fieldtype": "Currency",
+   "label": "Billing Rate",
+   "permlevel": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "billing_amount",
+   "fieldtype": "Currency",
+   "label": "Billing Amount",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "costing_rate",
+   "fieldtype": "Currency",
+   "label": "Costing Rate",
+   "permlevel": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "costing_amount",
+   "fieldtype": "Currency",
+   "label": "Costing Amount",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "no_copy": 1,
+   "options": "Sales Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "job_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Code",
+   "options": "Job Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_classification",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Job Classification",
+   "options": "Non Classified\nRoutine Job\nStatic Job\nDynamic Job",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "job_date",
+   "fieldtype": "Date",
+   "label": "Job Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "job_code.job_title",
+   "fieldname": "job_title",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Title"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-04-12 14:53:26.739603",
+ "modified_by": "Administrator",
+ "module": "EOD",
+ "name": "Job Done",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

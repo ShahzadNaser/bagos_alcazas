@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include alcazas *.css
+recursive-include alcazas *.csv
+recursive-include alcazas *.html
+recursive-include alcazas *.ico
+recursive-include alcazas *.js
+recursive-include alcazas *.json
+recursive-include alcazas *.md
+recursive-include alcazas *.png
+recursive-include alcazas *.py
+recursive-include alcazas *.svg
+recursive-include alcazas *.txt
+recursive-exclude alcazas *.pyc

@@ -1,0 +1,53 @@
+{
+ "creation": "2021-05-11 15:30:18.529468",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "department",
+  "job_tier",
+  "job_scope",
+  "job_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "job_tier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Tier",
+   "options": "Job Tier"
+  },
+  {
+   "fieldname": "job_scope",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Scope",
+   "options": "Job Scope"
+  },
+  {
+   "fieldname": "job_description",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Description",
+   "options": "Job Description"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-05-11 15:30:37.990428",
+ "modified_by": "Administrator",
+ "module": "Alcazas",
+ "name": "Job Filters",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

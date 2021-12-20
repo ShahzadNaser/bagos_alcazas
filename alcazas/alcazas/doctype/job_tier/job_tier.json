@@ -1,0 +1,81 @@
+{
+ "creation": "2021-04-09 11:56:46.810764",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "job_tier",
+  "tier_code",
+  "column_break_4",
+  "department",
+  "department_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_tier",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Tier/Level",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tier_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tier/Level Code",
+   "length": 2,
+   "reqd": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "label": "Code",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "department.department_code",
+   "fieldname": "department_code",
+   "fieldtype": "Data",
+   "label": "Department Code",
+   "read_only": 1
+  }
+ ],
+ "modified": "2021-04-18 13:57:03.091450",
+ "modified_by": "Administrator",
+ "module": "Alcazas",
+ "name": "Job Tier",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,47 @@
+{
+ "creation": "2021-04-12 13:31:30.368385",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_code",
+  "job_title",
+  "job_classification"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Code",
+   "options": "Job Code",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "job_code.job_title",
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Job Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "job_classification",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Job Classification",
+   "options": "Routine Job\nStatic Job\nDynamic Job",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-04-12 13:31:40.215683",
+ "modified_by": "Administrator",
+ "module": "EOD",
+ "name": "EODR Requirements Jobs",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

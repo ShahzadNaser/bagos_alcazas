@@ -1,0 +1,236 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-01-25 22:50:01.561478",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "employee",
+  "supervisor",
+  "column_break_3",
+  "eodr_date",
+  "employee_name",
+  "section_break_6",
+  "eodr_requirements",
+  "department",
+  "job_tier",
+  "column_break_9",
+  "job_scope",
+  "job_description",
+  "section_break_1",
+  "job_logs",
+  "section_break_15",
+  "total_expected_hours",
+  "column_break_17",
+  "total_spent_hours",
+  "section_break_19",
+  "static_job_hours",
+  "routine_job_hours",
+  "dynamic_job_hours",
+  "column_break_23",
+  "static_job_hours_percentage",
+  "routine_job_hours_percentage",
+  "dynamic_job_hours_percentage",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "no_copy": 1,
+   "options": "Employee",
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Today",
+   "fieldname": "eodr_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Reporting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "EODR-.MMYY.-",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_logs",
+   "fieldtype": "Table",
+   "label": "Job Done",
+   "options": "Job Done",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EODR",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "job_tier",
+   "fieldtype": "Link",
+   "label": "Job Tier",
+   "options": "Job Tier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_scope",
+   "fieldtype": "Link",
+   "label": "Job Scope",
+   "options": "Job Scope",
+   "read_only": 1
+  },
+  {
+   "fieldname": "job_description",
+   "fieldtype": "Link",
+   "label": "Job Description",
+   "options": "Job Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "eodr_requirements",
+   "fieldtype": "Link",
+   "label": "EODR Requirements",
+   "options": "EODR Requirements",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_expected_hours",
+   "fieldtype": "Float",
+   "label": "Total Expected Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_spent_hours",
+   "fieldtype": "Float",
+   "label": "Total Spent Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "static_job_hours",
+   "fieldtype": "Float",
+   "label": "Static Job Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "routine_job_hours",
+   "fieldtype": "Float",
+   "label": "Routine Job Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dynamic_job_hours",
+   "fieldtype": "Float",
+   "label": "Dynamic Job Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "static_job_hours_percentage",
+   "fieldtype": "Percent",
+   "label": "Static Job Hours Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "routine_job_hours_percentage",
+   "fieldtype": "Percent",
+   "label": "Routine Job Hours Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dynamic_job_hours_percentage",
+   "fieldtype": "Percent",
+   "label": "Dynamic Job Hours Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "User",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-05-11 15:23:00.162576",
+ "modified_by": "Administrator",
+ "module": "EOD",
+ "name": "EODR",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

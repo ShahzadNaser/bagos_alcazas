@@ -1,0 +1,149 @@
+{
+ "creation": "2021-01-25 22:52:22.857287",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_title",
+  "section_break_1",
+  "job_description",
+  "job_scope",
+  "column_break_3",
+  "department",
+  "job_tier",
+  "section_break_6",
+  "description",
+  "is_job_scope",
+  "section_break1",
+  "job_classification",
+  "job_uom",
+  "ai_hours",
+  "ai_costhr"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "is_job_scope",
+   "fieldtype": "Check",
+   "label": "Is a Job Scope"
+  },
+  {
+   "fieldname": "section_break1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_classification",
+   "fieldtype": "Select",
+   "label": "Job Classification",
+   "options": "Non Classified\nRoutine Job\nStatic Job\nDynamic Job"
+  },
+  {
+   "fieldname": "job_uom",
+   "fieldtype": "Link",
+   "label": "Job UOM",
+   "options": "Job UOM"
+  },
+  {
+   "fieldname": "ai_hours",
+   "fieldtype": "Float",
+   "label": "AI Hours",
+   "precision": "2"
+  },
+  {
+   "fieldname": "ai_costhr",
+   "fieldtype": "Currency",
+   "label": "AI Cost/Hr",
+   "precision": "5"
+  },
+  {
+   "fetch_from": "job_tier.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "job_scope.job_tier",
+   "fieldname": "job_tier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Tier/Level",
+   "options": "Job Tier",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_description.job_scope",
+   "fieldname": "job_scope",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Scope",
+   "options": "Job Scope",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_description",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Description",
+   "options": "Job Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Job Title",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "modified": "2021-04-17 14:09:15.426603",
+ "modified_by": "Administrator",
+ "module": "EOD",
+ "name": "Job Code",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "job_title",
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "job_title",
+ "track_changes": 1
+}
